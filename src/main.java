@@ -123,7 +123,7 @@ public class main extends javax.swing.JFrame {
         welcomeuser.setBounds(870, 52, 348, 29);
 
         jPanel1.add(jPanel8);
-        jPanel8.setBounds(1163, 0, 368, 92);
+        jPanel8.setBounds(1163, 0, 0, 0);
 
         jPanel5.setBackground(new java.awt.Color(0, 102, 102));
         jPanel5.setForeground(new java.awt.Color(0, 102, 102));
@@ -162,7 +162,6 @@ public class main extends javax.swing.JFrame {
         jPanel6.add(jLabel2);
         jLabel2.setBounds(70, 10, 58, 19);
 
-        tfpetugas2.setEditable(false);
         tfpetugas2.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
         tfpetugas2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,7 +213,7 @@ public class main extends javax.swing.JFrame {
         jPanel6.add(tftglkeluar);
         tftglkeluar.setBounds(10, 290, 148, 20);
 
-        jButton6.setBackground(new java.awt.Color(255, 255, 255));
+        jButton6.setBackground(new java.awt.Color(204, 204, 204));
         jButton6.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Print");
@@ -227,7 +226,7 @@ public class main extends javax.swing.JFrame {
         jPanel6.add(jButton6);
         jButton6.setBounds(10, 340, 100, 33);
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 255));
+        jButton3.setBackground(new java.awt.Color(204, 204, 204));
         jButton3.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("ReFresh");
@@ -240,7 +239,7 @@ public class main extends javax.swing.JFrame {
         jPanel6.add(jButton3);
         jButton3.setBounds(120, 340, 111, 33);
 
-        jButton4.setBackground(new java.awt.Color(255, 255, 255));
+        jButton4.setBackground(new java.awt.Color(204, 204, 204));
         jButton4.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Delete");
@@ -252,7 +251,7 @@ public class main extends javax.swing.JFrame {
         jPanel6.add(jButton4);
         jButton4.setBounds(250, 340, 100, 33);
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setBackground(new java.awt.Color(204, 204, 204));
         jButton1.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Clear");
@@ -265,7 +264,7 @@ public class main extends javax.swing.JFrame {
         jPanel6.add(jButton1);
         jButton1.setBounds(10, 390, 100, 33);
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setBackground(new java.awt.Color(204, 204, 204));
         jButton2.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Save");
@@ -278,7 +277,7 @@ public class main extends javax.swing.JFrame {
         jPanel6.add(jButton2);
         jButton2.setBounds(120, 390, 110, 33);
 
-        jButton7.setBackground(new java.awt.Color(255, 255, 255));
+        jButton7.setBackground(new java.awt.Color(204, 204, 204));
         jButton7.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jButton7.setForeground(new java.awt.Color(255, 255, 255));
         jButton7.setText("Exit");
@@ -373,9 +372,7 @@ public class main extends javax.swing.JFrame {
         ResultSet rs = connectionDB.executeQuery(SQL);
         try {
             while (rs.next()) {
-                String namauser = rs.getString(2);
-                welcomeuser.setText(namauser);
-                tfpetugas2.setText(namauser);
+                
             }
         } catch (SQLException ex) {
             Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
@@ -417,9 +414,9 @@ public class main extends javax.swing.JFrame {
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
-        String halouser = login.useraktif;
-        welcomeuser.setText(halouser);
-        tfpetugas2.setText(halouser);
+        //String halouser = login.useraktif;
+        //welcomeuser.setText(halouser);
+        //tfpetugas2.setText(halouser);
         selectData();
     }//GEN-LAST:event_formWindowOpened
 
